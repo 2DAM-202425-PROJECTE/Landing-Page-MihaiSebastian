@@ -6,72 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet">
     <title>Vite App</title>
+
   </head>
   <body>
     <script type="module" src="/main.js"></script>
-    <header class="bg-white" x-data="{menuOpen: false}">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-          </a>
-        </div>
-        <div class="flex lg:hidden">
-          <button @click="menuOpen=true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Open main menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Catalogo</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </nav>
-      <!-- Mobile menu, show/hide based on menu open state. -->
-      <div x-show="menuOpen"  class="lg:hidden" role="dialog" aria-modal="true">
-        <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-10"></div>
-        <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-            </a>
-            <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-              <span class="sr-only">Close menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <div class="mt-6 flow-root">
-            <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="space-y-2 py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inicio</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Catalogo</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
-              </div>
-              <div class="py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-
     <div class="bg-white">
-      <header class="absolute inset-x-0 top-0 z-50">
+      <header class="absolute inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
@@ -80,7 +20,7 @@
             </a>
           </div>
           <div class="flex lg:hidden">
-            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <button @click="menuOpen=true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
               <span class="sr-only">Open main menu</span>
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -90,15 +30,15 @@
           <div class="hidden lg:flex lg:gap-x-12">
             <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
             <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Catalogo</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Plans</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Empresa</a>
           </div>
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
           </div>
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
-        <div class="lg:hidden" role="dialog" aria-modal="true">
+        <div x-show="menuOpen" class="lg:hidden" role="dialog" aria-modal="true">
           <!-- Background backdrop, show/hide based on slide-over state. -->
           <div class="fixed inset-0 z-50"></div>
           <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -107,7 +47,7 @@
                 <span class="sr-only">Your Company</span>
                 <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
               </a>
-              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                 <span class="sr-only">Close menu</span>
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -119,8 +59,8 @@
                 <div class="space-y-2 py-6">
                   <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inicio</a>
                   <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Catalogo</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Plans</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Empresa</a>
                 </div>
                 <div class="py-6">
                   <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
@@ -154,7 +94,7 @@
                   <p class="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">La oferta acaba el 27 de Octubre.</p>
                   <p class="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">Després dels 3 messos si no es cancela es cobrarà mensualment la quantitat de 9,99€</p>
                   <div class="mt-10 flex items-center gap-x-6">
-                    <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+                    <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Suscríbete</a>
                   </div>
                 </div>
                 <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -191,11 +131,12 @@
         </div>
       </main>
     </div>
+    </div>
     <div class="bg-white py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Stay on top of customer support</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
+          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Gaudeix del millor entreteniment</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-600">Accedeix a un catàleg immens de pel·lícules i sèries per a tots els gustos, disponible en qualsevol moment i des de qualsevol dispositiu.</p>
         </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
@@ -206,12 +147,12 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z" />
                   </svg>
                 </div>
-                Unlimited inboxes
+                Catàleg sense límits
               </dt>
               <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                <p class="flex-auto">Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.</p>
+                <p class="flex-auto">Accedeix a milers de títols en alta definició, amb novetats afegides setmanalment. No et perdis cap estrena!</p>
                 <p class="mt-6">
-                  <a href="#" class="text-sm font-semibold leading-6 text-indigo-600">Learn more <span aria-hidden="true">→</span></a>
+                  <a href="#catalogue-section" class="text-sm font-semibold leading-6 text-indigo-600">Més informació <span aria-hidden="true">→</span></a>
                 </p>
               </dd>
             </div>
@@ -222,12 +163,12 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
                   </svg>
                 </div>
-                Manage team members
+                Gestió d'usuaris fàcil
               </dt>
               <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                <p class="flex-auto">Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.</p>
+                <p class="flex-auto">Crea perfils per a cada membre de la teva família o equip i personalitza les recomanacions segons els seus gustos.</p>
                 <p class="mt-6">
-                  <a href="#" class="text-sm font-semibold leading-6 text-indigo-600">Learn more <span aria-hidden="true">→</span></a>
+                  <a href="#" class="text-sm font-semibold leading-6 text-indigo-600">Més informació <span aria-hidden="true">→</span></a>
                 </p>
               </dd>
             </div>
@@ -238,12 +179,12 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
                   </svg>
                 </div>
-                Spam report
+                Protecció i seguretat
               </dt>
               <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                <p class="flex-auto">Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.</p>
+                <p class="flex-auto">Control parental, filtres de contingut i seguretat contra comptes no autoritzats, perquè puguis gaudir amb tranquil·litat.</p>
                 <p class="mt-6">
-                  <a href="#" class="text-sm font-semibold leading-6 text-indigo-600">Learn more <span aria-hidden="true">→</span></a>
+                  <a href="#" class="text-sm font-semibold leading-6 text-indigo-600">Més informació <span aria-hidden="true">→</span></a>
                 </p>
               </dd>
             </div>
@@ -251,6 +192,38 @@
         </div>
       </div>
     </div>
+    <div id="catalogue-section" class="bg-white py-12">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h3 class="text-3xl font-bold tracking-tight text-gray-900">Catàleg sense límit</h3>
+        <div class="relative mt-6 overflow-hidden">
+          <div class="w-full overflow-hidden">
+            <div class="marquee-wrapper flex space-x-4">
+              <div class="marquee-content flex space-x-4">
+                <img src="https://www.lahiguera.net/cinemania/pelicula/6404/como_entrenar_a_tu_dragon_2-cartel-5523.jpg" alt="Película 1" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://hips.hearstapps.com/hmg-prod/images/seven-poster-1590060422.jpg" alt="Película 2" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://i.ebayimg.com/images/g/mvMAAOSw5cNYLe15/s-l1200.jpg" alt="Película 3" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/media/imagenes/recursos/blade-runner-poster/136792680-1-esl-ES/blade-runner-poster.jpg?resize=980:*" alt="Película 4" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://i.ebayimg.com/00/s/MTIxNFg5MTE=/z/TnsAAOSwxZNbV3y6/$_57.JPG?set_id=8800005007" alt="Película 5" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://es.web.img3.acsta.net/medias/nmedia/18/67/61/01/20070878.jpg" alt="Película 7" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://www.uv.es/recursos/fatwirepub/ccurl/396/449/Idus,0.jpg" alt="Película 8" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://m.media-amazon.com/images/M/MV5BMTcwMjIyMTc2Nl5BMl5BanBnXkFtZTcwOTQyMzc5Mw@@._V1_FMjpg_UX1000_.jpg" alt="Película 9" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+              </div>
+              <div class="marquee-content flex space-x-4">
+                <img src="https://www.lahiguera.net/cinemania/pelicula/6404/como_entrenar_a_tu_dragon_2-cartel-5523.jpg" alt="Película 1" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://hips.hearstapps.com/hmg-prod/images/seven-poster-1590060422.jpg" alt="Película 2" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://i.ebayimg.com/images/g/mvMAAOSw5cNYLe15/s-l1200.jpg" alt="Película 3" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/media/imagenes/recursos/blade-runner-poster/136792680-1-esl-ES/blade-runner-poster.jpg?resize=980:*" alt="Película 4" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://i.ebayimg.com/00/s/MTIxNFg5MTE=/z/TnsAAOSwxZNbV3y6/$_57.JPG?set_id=8800005007" alt="Película 5" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://es.web.img3.acsta.net/medias/nmedia/18/67/61/01/20070878.jpg" alt="Película 7" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://www.uv.es/recursos/fatwirepub/ccurl/396/449/Idus,0.jpg" alt="Película 8" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+                <img src="https://m.media-amazon.com/images/M/MV5BMTcwMjIyMTc2Nl5BMl5BanBnXkFtZTcwOTQyMzc5Mw@@._V1_FMjpg_UX1000_.jpg" alt="Película 9" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
   </body>
