@@ -5,224 +5,157 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet">
-    <title>Vite App</title>
+    <title>MihaiSebastian</title>
 
   </head>
   <body>
     <script type="module" src="/main.js"></script>
-    <div class="bg-white">
-      <header class="absolute inset-x-0 top-0 z-50" x-data="{menuOpen: false}">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-            </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button @click="menuOpen=true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-              <span class="sr-only">Open main menu</span>
+    <header class="bg-white shadow" x-data="{menuOpen: false}">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="#" class="text-2xl font-bold text-gray-900 hover:text-indigo-600">Mihai Sebastian</a>
+        </div>
+        <div class="flex lg:hidden">
+          <button @click="menuOpen=true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Inici</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Sobre Mi</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Projectes</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Contacte</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div x-show="menuOpen" class="lg:hidden" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 z-10"></div>
+        <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold text-gray-900 hover:text-indigo-600">Mihai Sebastian</a>
+            <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Catalogo</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Plans</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Empresa</a>
-          </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </nav>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div x-show="menuOpen" class="lg:hidden" role="dialog" aria-modal="true">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-50"></div>
-          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-              </a>
-              <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inicio</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Catalogo</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Plans</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Empresa</a>
-                </div>
-                <div class="py-6">
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-                </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a href="#" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inici</a>
+                <a href="#" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre Mi</a>
+                <a href="#" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Projectes</a>
+                <a href="#" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contacte</a>
               </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <main>
-        <div class="relative isolate">
-          <svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
-            <defs>
-              <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
-              <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
-            </svg>
-            <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
-          </svg>
-          <div class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48" aria-hidden="true">
-            <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"></div>
-          </div>
-          <div class="overflow-hidden">
-            <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
-              <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-                <div class="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">1'99€ al mes durant 3 messos</h1>
-                  <p class="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">La oferta acaba el 27 de Octubre.</p>
-                  <p class="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">Després dels 3 messos si no es cancela es cobrarà mensualment la quantitat de 9,99€</p>
-                  <div class="mt-10 flex items-center gap-x-6">
-                    <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Suscríbete</a>
-                  </div>
-                </div>
-                <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                  <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                    <div class="relative">
-                      <img src="https://es.web.img3.acsta.net/pictures/16/11/30/17/44/581119.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                      <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                  </div>
-                  <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                    <div class="relative">
-                      <img src="https://es.web.img3.acsta.net/pictures/14/03/25/12/43/550099.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                      <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                    <div class="relative">
-                      <img src="https://pics.filmaffinity.com/El_reino_del_planeta_de_los_simios-151890738-large.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                      <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                  </div>
-                  <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                    <div class="relative">
-                      <img src="https://www.lahiguera.net/cinemania/pelicula/6880/whiplash-cartel-5827.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                      <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                    <div class="relative">
-                      <img src="https://pics.filmaffinity.com/El_chico_y_la_garza-226243829-large.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                      <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-    </div>
-    <div class="bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:mx-0">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Gaudeix del millor entreteniment</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Accedeix a un catàleg immens de pel·lícules i sèries per a tots els gustos, disponible en qualsevol moment i des de qualsevol dispositiu.</p>
-        </div>
-        <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            <div class="flex flex-col">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z" />
-                  </svg>
-                </div>
-                Catàleg sense límits
-              </dt>
-              <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                <p class="flex-auto">Accedeix a milers de títols en alta definició, amb novetats afegides setmanalment. No et perdis cap estrena!</p>
-                <p class="mt-6">
-                  <a href="#catalogue-section" class="text-sm font-semibold leading-6 text-indigo-600">Més informació <span aria-hidden="true">→</span></a>
-                </p>
-              </dd>
-            </div>
-            <div class="flex flex-col">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                  </svg>
-                </div>
-                Gestió d'usuaris fàcil
-              </dt>
-              <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                <p class="flex-auto">Crea perfils per a cada membre de la teva família o equip i personalitza les recomanacions segons els seus gustos.</p>
-                <p class="mt-6">
-                  <a href="#" class="text-sm font-semibold leading-6 text-indigo-600">Més informació <span aria-hidden="true">→</span></a>
-                </p>
-              </dd>
-            </div>
-            <div class="flex flex-col">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                  </svg>
-                </div>
-                Protecció i seguretat
-              </dt>
-              <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                <p class="flex-auto">Control parental, filtres de contingut i seguretat contra comptes no autoritzats, perquè puguis gaudir amb tranquil·litat.</p>
-                <p class="mt-6">
-                  <a href="#" class="text-sm font-semibold leading-6 text-indigo-600">Més informació <span aria-hidden="true">→</span></a>
-                </p>
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </div>
-    <div id="catalogue-section" class="bg-white py-12">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <h3 class="text-3xl font-bold tracking-tight text-gray-900">Catàleg sense límit</h3>
-        <div class="relative mt-6 overflow-hidden">
-          <div class="w-full overflow-hidden">
-            <div class="marquee-wrapper flex space-x-4">
-              <div class="marquee-content flex space-x-4">
-                <img src="https://www.lahiguera.net/cinemania/pelicula/6404/como_entrenar_a_tu_dragon_2-cartel-5523.jpg" alt="Película 1" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://hips.hearstapps.com/hmg-prod/images/seven-poster-1590060422.jpg" alt="Película 2" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://i.ebayimg.com/images/g/mvMAAOSw5cNYLe15/s-l1200.jpg" alt="Película 3" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/media/imagenes/recursos/blade-runner-poster/136792680-1-esl-ES/blade-runner-poster.jpg?resize=980:*" alt="Película 4" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://i.ebayimg.com/00/s/MTIxNFg5MTE=/z/TnsAAOSwxZNbV3y6/$_57.JPG?set_id=8800005007" alt="Película 5" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://es.web.img3.acsta.net/medias/nmedia/18/67/61/01/20070878.jpg" alt="Película 7" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://www.uv.es/recursos/fatwirepub/ccurl/396/449/Idus,0.jpg" alt="Película 8" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://m.media-amazon.com/images/M/MV5BMTcwMjIyMTc2Nl5BMl5BanBnXkFtZTcwOTQyMzc5Mw@@._V1_FMjpg_UX1000_.jpg" alt="Película 9" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-              </div>
-              <div class="marquee-content flex space-x-4">
-                <img src="https://www.lahiguera.net/cinemania/pelicula/6404/como_entrenar_a_tu_dragon_2-cartel-5523.jpg" alt="Película 1" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://hips.hearstapps.com/hmg-prod/images/seven-poster-1590060422.jpg" alt="Película 2" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://i.ebayimg.com/images/g/mvMAAOSw5cNYLe15/s-l1200.jpg" alt="Película 3" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/media/imagenes/recursos/blade-runner-poster/136792680-1-esl-ES/blade-runner-poster.jpg?resize=980:*" alt="Película 4" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://i.ebayimg.com/00/s/MTIxNFg5MTE=/z/TnsAAOSwxZNbV3y6/$_57.JPG?set_id=8800005007" alt="Película 5" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://es.web.img3.acsta.net/medias/nmedia/18/67/61/01/20070878.jpg" alt="Película 7" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://www.uv.es/recursos/fatwirepub/ccurl/396/449/Idus,0.jpg" alt="Película 8" class="w-48 h-72 rounded-lg shadow-md object-cover" />
-                <img src="https://m.media-amazon.com/images/M/MV5BMTcwMjIyMTc2Nl5BMl5BanBnXkFtZTcwOTQyMzc5Mw@@._V1_FMjpg_UX1000_.jpg" alt="Película 9" class="w-48 h-72 rounded-lg shadow-md object-cover" />
+              <div class="py-6">
+                <a href="#" class="block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
+
+    <section class="min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white flex flex-col justify-center items-center">
+      <h1 class="text-5xl font-bold mb-4">Hola, sóc Mihai Sebastian</h1>
+      <p class="text-lg max-w-xl text-center">Estudiant de DAM amb experiència en ASIX i SMX, apassionat per la tecnologia i el desenvolupament d'aplicacions.</p>
+      <a href="#projectes" class="mt-6 px-8 py-3 bg-white text-indigo-600 font-semibold rounded shadow-md hover:bg-gray-200">Descobreix els meus projectes</a>
+    </section>
+
+
+
+    <section class="bg-gray-100 py-20">
+      <div class="container mx-auto px-6 lg:px-8">
+        <!-- Coneixements Tècnics -->
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Coneixements i Passions</h2>
+
+        <!-- Qui sóc -->
+        <div class="bg-white p-8 rounded-lg shadow-lg text-center mb-12">
+          <h3 class="text-3xl font-bold text-indigo-600 mb-4">Qui sóc</h3>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Sóc Mihai Sebastian, estudiant de DAM amb experiència en ASIX i SMX. Apassionat de la tecnologia, m'encanten les pel·lícules, els videojocs i la música. Busco nous reptes i oportunitats per créixer professionalment.
+          </p>
+        </div>
+
+        <!-- Coneixements Tècnics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Icon" class="mx-auto h-12 w-12 mb-4">
+            <h3 class="text-2xl font-bold text-indigo-600 mb-2">HTML/CSS/XML</h3>
+            <p class="text-gray-600">Desenvolupament web amb estructures i estils avançats.</p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python Icon" class="mx-auto h-12 w-12 mb-4">
+            <h3 class="text-2xl font-bold text-indigo-600 mb-2">PYTHON</h3>
+            <p class="text-gray-600">Programació versàtil per a backend, IA i scripts.</p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" alt="PHP Icon" class="mx-auto h-12 w-12 mb-4">
+            <h3 class="text-2xl font-bold text-indigo-600 mb-2">PHP - LARAVEL</h3>
+            <p class="text-gray-600">Creació d'aplicacions web robustes amb frameworks moderns.</p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Icon" class="mx-auto h-12 w-12 mb-4">
+            <h3 class="text-2xl font-bold text-indigo-600 mb-2">JAVASCRIPT - VUE</h3>
+            <p class="text-gray-600">Desenvolupament de components dinàmics i reactius per a interfícies d'usuari.</p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/5815/5815809.png" alt="SQL Icon" class="mx-auto h-12 w-12 mb-4">
+            <h3 class="text-2xl font-bold text-indigo-600 mb-2">SQL - MySQL - Oracle</h3>
+            <p class="text-gray-600">Gestió de bases de dades eficient amb solucions SQL.</p>
+          </div>
+          <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/5969/5969186.png" alt="Unity Icon" class="mx-auto h-12 w-12 mb-4">
+            <h3 class="text-2xl font-bold text-indigo-600 mb-2">Unity - C#</h3>
+            <p class="text-gray-600">Desenvolupament de videojocs amb motor gràfic i llenguatge orientat a objectes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="projectes" class="bg-gray-100 py-20">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-800">Projectes</h2>
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold mb-2">Aplicació de Gestió de Xarxes</h3>
+            <p class="text-gray-600">Un projecte d'ASIX per gestionar xarxes d'ordinadors en temps real.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold mb-2">Aplicació Mòbil de Seguiment d'Activitats</h3>
+            <p class="text-gray-600">Un projecte personal per seguir les activitats diàries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contacte" class="py-20 bg-indigo-600 text-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold">Contacta'm</h2>
+        <p class="mt-4">Si estàs interessat en treballar amb mi o simplement vols dir hola, deixa'm un missatge!</p>
+        <form action="#" method="POST" class="mt-8 max-w-xl mx-auto">
+          <input type="text" name="name" placeholder="El teu nom" class="w-full px-4 py-2 mb-4 text-gray-800 rounded-md" required>
+          <input type="email" name="email" placeholder="El teu correu" class="w-full px-4 py-2 mb-4 text-gray-800 rounded-md" required>
+          <textarea name="message" placeholder="El teu missatge" class="w-full px-4 py-2 mb-4 text-gray-800 rounded-md" rows="5" required></textarea>
+          <button type="submit" class="px-6 py-2 bg-white text-indigo-600 font-semibold rounded-md shadow-md hover:bg-gray-200">Enviar missatge</button>
+        </form>
+      </div>
+    </section>
+
+
 
 
 
