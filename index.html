@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ca">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -24,13 +24,13 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Inici</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Sobre Mi</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Projectes</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Contacte</a>
+          <a href="#inici" class="text-sm font-semibold leading-6 text-gray-900">Inici</a>
+          <a href="#coneixements" class="text-sm font-semibold leading-6 text-gray-900">Sobre Mi</a>
+          <a href="#projectes" class="text-sm font-semibold leading-6 text-gray-900">Projectes</a>
+          <a href="#contacte" class="text-sm font-semibold leading-6 text-gray-900">Contacte</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#contacte" class="text-sm font-semibold leading-6 text-gray-900">Contacta'm <span aria-hidden="true">&rarr;</span></a>
         </div>
       </nav>
 
@@ -50,33 +50,30 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
-                <a href="#" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inici</a>
-                <a href="#" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre Mi</a>
-                <a href="#" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Projectes</a>
-                <a href="#" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contacte</a>
+                <a href="#inici" @click="menuOpen=false" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inici</a>
+                <a href="#coneixements" @click="menuOpen=false" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre Mi</a>
+                <a href="#projectes" @click="menuOpen=false" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Projectes</a>
+                <a href="#contacte" @click="menuOpen=false" class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contacte</a>
               </div>
               <div class="py-6">
-                <a href="#" class="block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+                <a href="#contacte" @click="menuOpen=false" class="block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contacta'm</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-
-    <section class="min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white flex flex-col justify-center items-center">
-      <h1 class="text-5xl font-bold mb-4">Hola, sóc Mihai Sebastian</h1>
-      <p class="text-lg max-w-xl text-center">Estudiant de DAM amb experiència en ASIX i SMX, apassionat per la tecnologia i el desenvolupament d'aplicacions.</p>
-      <a href="#projectes" class="mt-6 px-8 py-3 bg-white text-indigo-600 font-semibold rounded shadow-md hover:bg-gray-200">Descobreix els meus projectes</a>
+    <!-- Petita presentació -->
+    <section id="inici" class="min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white flex flex-col justify-center items-center text-center p-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Hola, sóc Mihai Sebastian</h1>
+      <p class="text-base md:text-lg max-w-xl">Estudiant de DAM amb experiència en ASIX i SMX, apassionat per la tecnologia i el desenvolupament d'aplicacions.</p>
+      <a href="#projectes" class="mt-6 px-6 md:px-8 py-3 bg-white text-indigo-600 font-semibold rounded shadow-md hover:bg-gray-200">Descobreix els meus projectes</a>
     </section>
 
-
-
-    <section class="bg-gray-100 py-20">
+<!-- Qui soc i coneixements tècnics-->
+    <section id="coneixements" class="bg-gray-100 py-5">
       <div class="container mx-auto px-6 lg:px-8">
-        <!-- Coneixements Tècnics -->
         <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Coneixements i Passions</h2>
-
         <!-- Qui sóc -->
         <div class="bg-white p-8 rounded-lg shadow-lg text-center mb-12">
           <h3 class="text-3xl font-bold text-indigo-600 mb-4">Qui sóc</h3>
@@ -84,7 +81,6 @@
             Sóc Mihai Sebastian, estudiant de DAM amb experiència en ASIX i SMX. Apassionat de la tecnologia, m'encanten les pel·lícules, els videojocs i la música. Busco nous reptes i oportunitats per créixer professionalment.
           </p>
         </div>
-
         <!-- Coneixements Tècnics -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div class="p-6 bg-white rounded-lg shadow-lg text-center">
@@ -120,44 +116,69 @@
         </div>
       </div>
     </section>
-
-
-
-
-
+<!--Projectes-->
     <section id="projectes" class="bg-gray-100 py-20">
-      <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold text-gray-800">Projectes</h2>
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Projectes</h2>
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Projecte Anime API amb Vue -->
           <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-            <h3 class="text-xl font-semibold mb-2">Aplicació de Gestió de Xarxes</h3>
-            <p class="text-gray-600">Un projecte d'ASIX per gestionar xarxes d'ordinadors en temps real.</p>
+            <h3 class="text-xl font-semibold mb-2">Pàgina Web d'Anime amb Vue</h3>
+            <p class="text-gray-600">Una aplicació web interactiva que utilitza una API d'anime per oferir informació detallada sobre animes i mangas. Amb un buscador avançat, l'usuari pot descobrir noves sèries i explorar una àmplia base de dades visualment atractiva.</p>
           </div>
+
+          <!-- Projecte Joc Trivial amb Python -->
           <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-            <h3 class="text-xl font-semibold mb-2">Aplicació Mòbil de Seguiment d'Activitats</h3>
-            <p class="text-gray-600">Un projecte personal per seguir les activitats diàries.</p>
+            <h3 class="text-xl font-semibold mb-2">Joc Trivial amb Python</h3>
+            <p class="text-gray-600">Un joc de preguntes i respostes dissenyat per desafiar els teus coneixements en diverses categories. Desenvolupat en Python.</p>
+          </div>
+
+          <!-- Projecte Nmap amb Python -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold mb-2">Escàner de Xarxes amb Nmap i Python</h3>
+            <p class="text-gray-600">Aquest programa utilitza Nmap per descobrir dispositius connectats a una xarxa local, incloent vulnerabilitats i detalls tècnics, oferint als usuaris un mapa complet de la seva xarxa en temps real.</p>
+          </div>
+
+          <!-- Projecte Gestió de Tasques amb Laravel i MariaDB -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold mb-2">Gestió de Tasques amb PHP Laravel</h3>
+            <p class="text-gray-600">Una plataforma de gestió de tasques per equips, on cada treballador té tasques assignades que pot crear, modificar, o completar. Integra Laravel amb una base de dades MariaDB per oferir una solució personalitzada per a la gestió d’equips.</p>
+          </div>
+
+          <!-- Projecte Flappy Bird amb Unity -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold mb-2">Flappy Bird amb Unity</h3>
+            <p class="text-gray-600">Una adaptació del popular joc Flappy Bird, desenvolupada amb Unity.</p>
+          </div>
+
+          <!-- Projectes Bases de Dades amb Oracle i MySQL -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold mb-2">Bases de Dades amb Oracle i MySQL</h3>
+            <p class="text-gray-600">Diverses pràctiques i projectes realitzats amb Oracle i MySQL, que inclouen disseny de bases de dades, optimització de consultes, i gestió eficient de grans volums de dades.</p>
           </div>
         </div>
       </div>
     </section>
-
-
+    <!-- Contacte -->
     <section id="contacte" class="py-20 bg-indigo-600 text-white">
-      <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold">Contacta'm</h2>
-        <p class="mt-4">Si estàs interessat en treballar amb mi o simplement vols dir hola, deixa'm un missatge!</p>
-        <form action="#" method="POST" class="mt-8 max-w-xl mx-auto">
-          <input type="text" name="name" placeholder="El teu nom" class="w-full px-4 py-2 mb-4 text-gray-800 rounded-md" required>
-          <input type="email" name="email" placeholder="El teu correu" class="w-full px-4 py-2 mb-4 text-gray-800 rounded-md" required>
-          <textarea name="message" placeholder="El teu missatge" class="w-full px-4 py-2 mb-4 text-gray-800 rounded-md" rows="5" required></textarea>
-          <button type="submit" class="px-6 py-2 bg-white text-indigo-600 font-semibold rounded-md shadow-md hover:bg-gray-200">Enviar missatge</button>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold">Contacta'm</h2>
+        <p class="mt-4 max-w-lg mx-auto">Si estàs interessat en treballar amb mi o simplement vols dir hola, deixa'm un missatge!</p>
+        <form action="#" method="POST" class="mt-8 max-w-md mx-auto">
+          <input type="text" name="name" placeholder="El teu nom" class="w-full px-4 py-2 mb-4 text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+          <input type="email" name="email" placeholder="El teu correu" class="w-full px-4 py-2 mb-4 text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+          <textarea name="message" placeholder="El teu missatge" class="w-full px-4 py-2 mb-4 text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="5" required></textarea>
+          <button type="submit" class="px-6 py-2 bg-white text-indigo-600 font-semibold rounded-md shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">Enviar missatge</button>
         </form>
       </div>
     </section>
 
 
-
-
-
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto text-center">
+        <p class="text-sm">&copy; 2024 Mihai Sebastian. Tots els drets reservats.</p>
+      </div>
+    </footer>
   </body>
 </html>
