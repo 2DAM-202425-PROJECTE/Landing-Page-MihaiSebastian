@@ -2,7 +2,8 @@
 export default {
   content: ['./components/**/*.{html,js}',
     './pages/**/*.{html,js}',
-    './index.html',],
+    './index.html',
+  './carrito/index.html'],
   theme: {
     extend: {},
   },

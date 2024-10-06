@@ -7,6 +7,7 @@
     <link href="style.css" rel="stylesheet">
     <title>MihaiSebastian</title>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="module" src="cookies.js"></script>
 
 </head>
 
@@ -81,6 +82,30 @@
         </div>
     </div>
 </header>
+
+<section id="cookie-banner" class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-1/2 transform -translate-x-1/2 bottom-16 dark:border-gray-700 rounded-2xl z-[9999]" style="display: none;">
+    <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Avis de cookies</h2>
+
+    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">Utilitzem cookies per assegurar-nos que t'oferim la millor experiència al nostre lloc web. <a href="#" class="text-blue-500 hover:underline">Llegeix la política de cookies</a>.</p>
+
+    <div class="flex items-center justify-between mt-4 gap-x-4 shrink-0">
+        <button id="preferencies" class="text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none">
+            Gestiona les teves preferències
+        </button>
+
+        <button id="acceptar" class="text-xs bg-green-600 font-medium rounded-lg hover:bg-green-500 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Acceptar
+        </button>
+
+        <button id="rebutjar" class="text-xs bg-red-600 font-medium rounded-lg hover:bg-red-500 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Rebutjar
+        </button>
+
+        <button id="tancar" class="text-xs border border-gray-300 text-gray-800 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Tancar
+        </button>
+    </div>
+</section>
 
 
 
